@@ -148,6 +148,7 @@ public class MusicOrganizer
      */
     public void listMatching(String searchString)
     { 
+        files = new ArrayList<>();
         boolean found = false; 
         for(String filename : files) {
             if(filename.contains(searchString)){
@@ -155,6 +156,8 @@ public class MusicOrganizer
                 System.out.println(filename);
                 found = true;
             }
-    }     
+        }    if(!found) {
+        System.out.println("No files matched");
+    }
     }  
 }
