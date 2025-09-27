@@ -130,5 +130,31 @@ public class MusicOrganizer
             valid = true;
         }
         return valid;
+    } 
+    /**
+     * 
+     */ 
+    public void listWithIndex() { 
+        int position = 0; 
+        for (String filename : files) {
+            System.out.println(position + ":" + filename);
+            position++;
+        }
     }
+    
+    /**
+     * List the names of files matching the gievn search string
+     * @parm searchString The string to match.
+     */
+    public void listMatching(String searchString)
+    { 
+        boolean found = false; 
+        for(String filename : files) {
+            if(filename.contains(searchString)){
+                // A match.
+                System.out.println(filename);
+                found = true;
+            }
+    }     
+    }  
 }
