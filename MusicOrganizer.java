@@ -160,4 +160,20 @@ public class MusicOrganizer
         System.out.println("No files matched");
     }
     }  
+    /**
+     * 
+     */
+    public void playArtistSamples(String artist) {
+        files = new ArrayList<>();
+        boolean found = false;
+        for(String filename : files) { 
+            if(filename.contains(artist)) {
+                player.playSample(filename); // play a 15 second preview.
+                found = true; 
+            } 
+            if(!found) {
+               System.out.println("No tracks found for artist: " + artist);
+            }
+    }
+    } 
 }
